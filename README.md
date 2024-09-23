@@ -1,51 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgentConnect: Bridging Talent and Opportunities</title>
-</head>
-<body>
-    <h1>AgentConnect: Bridging Talent and Opportunities</h1>
-    <img src="/images/logo.png" alt="AgentConnect Logo">
+# Agent-Employer Connect Platform
 
-    <p>AgentConnect is a powerful platform designed to revolutionize the recruitment process by connecting talented agents (job seekers) with forward-thinking employers. Whether you're a recent graduate, a seasoned professional, or an employer seeking top talent, AgentConnect provides a seamless experience for all stakeholders.</p>
+## Overview
 
-    <h2>Features</h2>
-    <ul>
-        <li>Job Listings and Search: Employers can post job openings, complete with detailed descriptions, requirements, and company profiles. Agents can search for relevant job opportunities based on location, industry, and job type.</li>
-        <li>Application Management: Agents can apply directly through the platform, eliminating the need for external emails or application forms. Employers receive applications in a centralized dashboard, making candidate evaluation efficient.</li>
-        <li>Real-Time Communication: Built-in messaging allows agents and employers to communicate directly. Schedule interviews, discuss job details, and provide feedback—all within AgentConnect.</li>
-        <li>Customized Recommendations: Our recommendation engine suggests personalized job matches based on agent profiles and preferences. Agents receive tailored notifications about relevant openings.</li>
-        <li>Analytics Dashboard: Employers gain insights into application trends, conversion rates, and candidate interactions. Data-driven decisions lead to better hiring outcomes.</li>
-    </ul>
+The **Agent-Employer Connect Platform** is designed to streamline the hiring process by connecting potential agents with employers. The platform facilitates job applications, resume evaluations, and interactive communication between agents and employers. By providing a seamless hiring experience, this platform aims to simplify recruitment while ensuring both agents and employers find the best matches.
 
-    <h2>Technology Stack</h2>
-    <ul>
-        <li>Backend: Built using Python and Django. PostgreSQL database for storing job listings and user profiles. RESTful APIs for seamless communication.</li>
-        <li>Frontend: Developed with React.js for a responsive and dynamic user interface. Material-UI components for consistent styling.</li>
-        <li>Deployment and Hosting: Hosted on AWS EC2 instances. Domain managed through Route 53.</li>
-    </ul>
+## Features
 
-    <h2>Hardware Requirements</h2>
-    <ul>
-        <li>Server Infrastructure: EC2 instances with appropriate CPU and RAM resources. Load balancers for scalability.</li>
-        <li>Database Server: PostgreSQL server with optimized configurations. Regular backups and disaster recovery mechanisms.</li>
-        <li>Monitoring and Security: Set up monitoring tools (e.g., Prometheus, Grafana). Configure firewalls and intrusion detection systems.</li>
-    </ul>
+- **Agent Profile Management**: Agents can create and manage detailed profiles, including experience, skills, and availability.
+- **Employer Job Listings**: Employers can post jobs, specify requirements, and receive applications.
+- **Smart ATS Integration**: The platform uses an AI-powered Applicant Tracking System (ATS) to evaluate resumes against job descriptions.
+- **Interactive PDF Resume Evaluation**: The platform can evaluate resumes uploaded in PDF format, offering tailored feedback.
+- **Job Matching and Recommendations**: Based on agents' profiles, the platform recommends suitable jobs and employers.
+- **Agent-Employer Communication**: Secure, real-time messaging allows agents and employers to communicate directly.
+- **FAISS Integration**: Fast, similarity-based resume searches using FAISS vector search engine to find the most relevant resumes.
 
-    <h2>Getting Started</h2>
-    <ol>
-        <li>Clone this repository: <code>git clone https://github.com/yourusername/AgentConnect.git</code></li>
-        <li>Install dependencies: <code>cd AgentConnect && npm install</code></li>
-        <li>Start the development server: <code>npm start</code></li>
-        <li>Access the platform at <a href="http://localhost:3000">http://localhost:3000</a></li>
-    </ol>
+## Technologies Used
 
-    <h2>Contributing</h2>
-    <p>We welcome contributions! Please check out our <a href="CONTRIBUTING.md">contribution guidelines</a> for details.</p>
+- **Backend**: Python (Flask/Django), LangChain, FAISS, Google Generative AI
+- **Frontend**: Streamlit for dynamic user interaction
+- **Database**: PostgreSQL/MySQL for user data and job listings
+- **Cloud Storage**: AWS S3 for storing resumes and related documents
+- **Embeddings**: Google Generative AI Embeddings
+- **AI Model**: Google Gemini Pro for natural language understanding and question answering
+- **PDF Processing**: PyPDF2 for extracting text from resumes
+- **Vector Store**: FAISS for fast, similarity-based searches
 
-    <h2>License</h2>
-    <p>This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p>
-</body>
-</html>
+## Software Requirements
+
+- **Python 3.8+**
+- **Streamlit**
+- **Flask/Django**
+- **LangChain**
+- **PyPDF2**
+- **FAISS**
+- **Google Generative AI SDK**
+- **PostgreSQL/MySQL**
+- **Docker (for deployment)**
+
+## Hardware Requirements
+
+The platform is scalable and can be deployed on any cloud service provider (AWS, GCP, Azure). However, for optimal performance, the following hardware specifications are recommended:
+
+- **Development**:
+  - CPU: 4-core processor
+  - RAM: 8 GB
+  - Storage: 50 GB
+
+- **Production**:
+  - CPU: 8-core processor
+  - RAM: 16 GB or more
+  - Storage: 200 GB SSD
+  - Network: High bandwidth for real-time messaging and uploads
+
+## Installation
+
+### Prerequisites
+- Install [Python 3.8+](https://www.python.org/downloads/)
+- Set up [PostgreSQL](https://www.postgresql.org/download/) or [MySQL](https://dev.mysql.com/downloads/)
+- Set up your preferred cloud provider (AWS/GCP/Azure) for hosting and storage.
+- Set up Docker (for deployment) if needed.
+
+### Steps
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/agent-employer-connect-platform.git
+   cd agent-employer-connect-platform
